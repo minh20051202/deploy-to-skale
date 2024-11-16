@@ -1,0 +1,67 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.20;
+
+library Errors {
+    string public constant NOT_CONTRACT = "9";
+    string public constant CALLER_NOT_POOL_CONFIGURATOR = "10";
+    string public constant CALLER_NOT_ATOKEN = "11";
+    string public constant RESERVE_ALREADY_ADDED = "14";
+    string public constant NO_MORE_RESERVES_ALLOWED = "15";
+    string public constant EMODE_CATEGORY_RESERVED = "16";
+    string public constant INVALID_EMODE_CATEGORY_ASSIGNMENT = "17";
+    string public constant RESERVE_LIQUIDITY_NOT_ZERO = "18";
+    string public constant INVALID_RESERVE_PARAMS = "20";
+    string public constant INVALID_EMODE_CATEGORY_PARAMS = "21";
+    string public constant CALLER_MUST_BE_POOL = "23";
+    string public constant INVALID_MINT_AMOUNT = "24";
+    string public constant INVALID_BURN_AMOUNT = "25";
+    string public constant INVALID_AMOUNT = "26";
+    string public constant RESERVE_INACTIVE = "27";
+    string public constant RESERVE_FROZEN = "28";
+    string public constant RESERVE_PAUSED = "29";
+    string public constant BORROWING_NOT_ENABLED = "30";
+    string public constant STABLE_BORROWING_NOT_ENABLED = "31";
+    string public constant NOT_ENOUGH_AVAILABLE_USER_BALANCE = "32";
+    string public constant INVALID_INTEREST_RATE_MODE_SELECTED = "33";
+    string public constant COLLATERAL_BALANCE_IS_ZERO = "34";
+    string public constant HEALTH_FACTOR_LOWER_THAN_LIQUIDATION_THRESHOLD =
+        "35";
+    string public constant COLLATERAL_CANNOT_COVER_NEW_BORROW = "36";
+    string public constant COLLATERAL_SAME_AS_BORROWING_CURRENCY = "37";
+    string public constant AMOUNT_BIGGER_THAN_MAX_LOAN_SIZE_STABLE = "38";
+    string public constant NO_DEBT_OF_SELECTED_TYPE = "39";
+    string public constant NO_EXPLICIT_AMOUNT_TO_REPAY_ON_BEHALF = "40";
+    string public constant UNDERLYING_BALANCE_ZERO = "43";
+    string public constant BORROW_CAP_EXCEEDED = "50";
+    string public constant SUPPLY_CAP_EXCEEDED = "51";
+    string public constant DEBT_CEILING_EXCEEDED = "53";
+    string public constant LTV_VALIDATION_FAILED = "57";
+    string public constant INCONSISTENT_EMODE_CATEGORY = "58";
+    string public constant ASSET_NOT_BORROWABLE_IN_ISOLATION = "60";
+    string public constant RESERVE_ALREADY_INITIALIZED = "61";
+    string public constant USER_IN_ISOLATION_MODE_OR_LTV_ZERO = "62";
+    string public constant INVALID_LTV = "63";
+    string public constant INVALID_LIQ_THRESHOLD = "64";
+    string public constant INVALID_LIQ_BONUS = "65";
+    string public constant INVALID_DECIMALS = "66";
+    string public constant INVALID_RESERVE_FACTOR = "67";
+    string public constant INVALID_BORROW_CAP = "68";
+    string public constant INVALID_SUPPLY_CAP = "69";
+    string public constant INVALID_LIQUIDATION_PROTOCOL_FEE = "70";
+    string public constant INVALID_EMODE_CATEGORY = "71";
+    string public constant INVALID_UNBACKED_MINT_CAP = "72";
+    string public constant INVALID_DEBT_CEILING = "73";
+    string public constant INVALID_RESERVE_INDEX = "74";
+    string public constant ZERO_ADDRESS_NOT_VALID = "77";
+    string public constant INVALID_EXPIRATION = "78";
+    string public constant INVALID_SIGNATURE = "79";
+    string public constant DEBT_CEILING_NOT_ZERO = "81";
+    string public constant ASSET_NOT_LISTED = "82";
+    string public constant INVALID_OPTIMAL_USAGE_RATIO = "83";
+    string public constant INVALID_OPTIMAL_STABLE_TO_TOTAL_DEBT_RATIO = "84";
+    string public constant UNDERLYING_CANNOT_BE_RESCUED = "85";
+    string public constant OPERATION_NOT_SUPPORTED = "86";
+    string public constant STABLE_BORROWING_ENABLED = "88";
+    string public constant SILOED_BORROWING_VIOLATION = "89";
+    string public constant RESERVE_DEBT_NOT_ZERO = "90";
+}

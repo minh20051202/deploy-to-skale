@@ -1,66 +1,53 @@
-## Foundry
+## Install Foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+```bash
 
-Foundry consists of:
+curl -L https://foundry.paradigm.xyz | bash ##then run
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+foundryup
 
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
 ```
 
-### Test
+## Install libraries
 
-```shell
-$ forge test
+```bash
+
+forge install foundry-rs/forge-std --no--commit
+
+forge install OpenZeppelin/openzeppelin-contracts --no-commit
+
+forge install Cyfrin/foundry-devops --no-commit
+
 ```
 
-### Format
+## Deployment
 
-```shell
-$ forge fmt
+First, import private key
+
+```bash
+
+cast wallet import defaultKey --interactive
+
 ```
 
-### Gas Snapshots
+Second, set the rpc url in .env file, for example:
 
-```shell
-$ forge snapshot
+```
+SKALE_TITAN_HUB_RPC_URL=https://testnet.skalenodes.com/v1/aware-fake-trim-testnet
 ```
 
-### Anvil
+run
 
-```shell
-$ anvil
+```bash
+
+source .env
+
 ```
 
-### Deploy
+then deploy MyNFT contract, replace 0x755... with your public key
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+```bash
 
-### Cast
+forge script DeployMyNFT --account defaultKey --sender 0x755AC4E90c24135f1B7f73AeEA6a7ff42b07dd94 --rpc-url $SKALE_TITAN_HUB_RPC_URL --broadcast --legacy
 
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
 ```
