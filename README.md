@@ -44,10 +44,10 @@ source .env
 
 ```
 
-then deploy MyNFT contract, replace 0x755... with your public key
+then deploy your contract, replace 0x755... with your public key:
 
 ```bash
 
-forge script DeployMyNFT --account defaultKey --sender 0x755AC4E90c24135f1B7f73AeEA6a7ff42b07dd94 --rpc-url $SKALE_TITAN_HUB_RPC_URL --broadcast --legacy
+forge script DeployPoolAddressesProvider --account defaultKey --sender 0x755AC4E90c24135f1B7f73AeEA6a7ff42b07dd94 --rpc-url $SKALE_TITAN_HUB_RPC_URL --broadcast --legacy
 
 ```
